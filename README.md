@@ -17,6 +17,12 @@ $ make html
 
 The HTML views are now present in `build/html`.
 
+To open the current build in `build/html` you can use:
+```
+python -m webbrowser "./build/html/index.html"
+```
+
+
 ## License
 
 All text and code in this repository is licensed under [ BSD-2-Clause][].
