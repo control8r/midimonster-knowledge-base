@@ -6,15 +6,26 @@
 Welcome to MidiMonster Wiki's documentation!
 ============================================
 
+.. _Manual: http://manual.uberspace.de
+.. _Edit on Github: https://github.com/Uberspace/lab/blob/master/source/index.rst
+.. _GitHub repository: https://github.com/Uberspace/lab/
+.. _support: https://uberspace.de/support
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :caption: General
+   :hidden:
+   :maxdepth: 1
+   :glob:
 
+   general_*
 
+.. toctree::
+   :caption: Meta
+   :hidden:
+   :maxdepth: 1
+   :glob:
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Repository <https://github.com/control8r/midimonster-wiki>
+   Changelog <https://github.com/control8r/midimonster-wiki/commits/master>
+   Legal Notice <#>
+   Privacy <#>
