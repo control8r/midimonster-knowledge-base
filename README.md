@@ -1,4 +1,4 @@
-# MidiMonster Wiki
+# MidiMonster Knowledge Base
 
 ### Initial Setup
 
@@ -22,6 +22,7 @@ To open the current build in `build/html` you can use:
 python -m webbrowser "./build/html/index.html"
 ```
 
+https://kb-staging.midimonster.net/
 
 ## License
 

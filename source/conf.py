@@ -42,7 +42,7 @@ master_doc = 'index'
 
 # -- Project information -----------------------------------------------------
 
-project = 'Welcome to MIDIMonster Knowledge Base'
+project = 'MIDIMonster Knowledge Base'
 copyright = '2020, Staff of github.com/control8r'
 author = 'Staff of github.com/control8r'
 
