@@ -3,21 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MidiMonster Wiki's documentation!
-============================================
-
-.. _Manual: http://manual.uberspace.de
-.. _Edit on Github: https://github.com/Uberspace/lab/blob/master/source/index.rst
-.. _GitHub repository: https://github.com/Uberspace/lab/
-.. _support: https://uberspace.de/support
+Welcome to MidiMonster Knowledge Base!
+======================================
 
 .. toctree::
    :caption: General
    :hidden:
    :maxdepth: 1
    :glob:
-
    general_*
+
+.. toctree::
+   :caption: Usecases
+   :hidden:
+   :maxdepth: 1
+   :glob:
+
+
 
 .. toctree::
    :caption: Meta

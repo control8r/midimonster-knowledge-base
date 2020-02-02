@@ -43,7 +43,7 @@ master_doc = 'index'
 
 # -- Project information -----------------------------------------------------
 
-project = 'MidiMonster Wiki'
+project = 'Welcome to MidiMonster Knowledge Base'
 copyright = '2020, Staff of github.com/control8r'
 author = 'Staff of github.com/control8r'
 
