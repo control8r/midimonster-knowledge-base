@@ -12,7 +12,7 @@ Welcome to MidiMonster Knowledge Base!
    :maxdepth: 1
    :glob:
    
-   source/general/*
+   general/*
 
 
 .. toctree::
@@ -21,7 +21,7 @@ Welcome to MidiMonster Knowledge Base!
    :maxdepth: 1
    :glob:
 
-   source/usecases/*
+   usecases/*
 
 
 .. toctree::
