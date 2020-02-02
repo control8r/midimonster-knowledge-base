@@ -1,0 +1,3 @@
+[submodule "source/midimonster"]
+	path = source/midimonster
+	url = https://github.com/cbdevnet/midimonster.git
