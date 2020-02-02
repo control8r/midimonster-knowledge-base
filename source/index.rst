@@ -11,7 +11,9 @@ Welcome to MidiMonster Knowledge Base!
    :hidden:
    :maxdepth: 1
    :glob:
-   general_*
+   
+   source/general/*
+
 
 .. toctree::
    :caption: Usecases
@@ -19,6 +21,7 @@ Welcome to MidiMonster Knowledge Base!
    :maxdepth: 1
    :glob:
 
+   source/usecases/*
 
 
 .. toctree::
@@ -27,7 +30,7 @@ Welcome to MidiMonster Knowledge Base!
    :maxdepth: 1
    :glob:
 
-   Repository <https://github.com/control8r/midimonster-wiki>
-   Changelog <https://github.com/control8r/midimonster-wiki/commits/master>
-   Legal Notice <#>
-   Privacy <#>
+   Repository <https://github.com/control8r/midimonster-knowledge-base>
+   Changelog <https://github.com/control8r/midimonster-knowledge-base/commits/master>
+   Legal Notice <https://github.com/control8r/midimonster-knowledge-base>
+   Privacy <https://github.com/control8r/midimonster-knowledge-base>

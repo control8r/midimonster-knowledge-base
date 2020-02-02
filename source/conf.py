@@ -84,7 +84,7 @@ html_context = {
     'css_files': ['_static/css/custom.css'],
     'display_github': True,
     'github_user': 'control8r',
-    'github_repo': 'midimonster-wiki',
+    'github_repo': 'midimonster-knowledge-base',
     'github_version': 'master',
     'conf_py_path': '/source/'
 }
