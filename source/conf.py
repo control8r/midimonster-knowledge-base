@@ -25,8 +25,7 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.imgmath',
-    'notfound.extension',
+    'sphinx.ext.imgmath'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -43,7 +42,7 @@ master_doc = 'index'
 
 # -- Project information -----------------------------------------------------
 
-project = 'Welcome to MidiMonster Knowledge Base'
+project = 'Welcome to MIDIMonster Knowledge Base'
 copyright = '2020, Staff of github.com/control8r'
 author = 'Staff of github.com/control8r'
 
