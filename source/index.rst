@@ -11,8 +11,28 @@ Welcome to MidiMonster Knowledge Base!
    :hidden:
    :maxdepth: 1
    :glob:
-   
+
    general/*
+
+
+.. toctree::
+   :caption: Backends
+   :hidden:
+   :maxdepth: 1
+   :glob:
+
+   midimonster/backends/artnet.md
+   midimonster/backends/evdev.md
+   midimonster/backends/jack.md
+   midimonster/backends/loopback.md
+   midimonster/backends/lua.md
+   midimonster/backends/maweb.md
+   midimonster/backends/midi.md
+   midimonster/backends/ola.md
+   midimonster/backends/osc.md
+   midimonster/backends/sacn.md
+
+   midimonster/backends/winmidi.md
 
 
 .. toctree::
