@@ -47,6 +47,15 @@ Welcome to MidiMonster Knowledge Base!
 
 
 .. toctree::
+   :caption: Development
+   :hidden:
+   :maxdepth: 1
+   :glob:
+
+   dev/*
+
+
+.. toctree::
    :caption: Meta
    :hidden:
    :maxdepth: 1
