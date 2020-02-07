@@ -1,14 +1,14 @@
 .. _Artnet: ../midimonster/backends/artnet.html
 .. _evdev: ../midimonster/backends/evdev.html
 .. _jack: ../midimonster/backends/jack.html
-.. _loopback ../midimonster/backends/loopback.html
-.. _lua ../midimonster/backends/lua.html
-.. _maweb ../midimonster/backends/maweb.html
-.. _midi ../midimonster/backends/midi.html
-.. _ola ../midimonster/backends/ola.html
-.. _osc ../midimonster/backends/osc.html
-.. _sacn ../midimonster/backends/sacn.html
-.. _winmidi ../midimonster/backends/winmidi.html
+.. _loopback: ../midimonster/backends/loopback.html
+.. _lua: ../midimonster/backends/lua.html
+.. _maweb: ../midimonster/backends/maweb.html
+.. _midi: ../midimonster/backends/midi.html
+.. _ola: ../midimonster/backends/ola.html
+.. _osc: ../midimonster/backends/osc.html
+.. _sacn: ../midimonster/backends/sacn.html
+.. _winmidi: ../midimonster/backends/winmidi.html
 
 What is MIDIMonster?
 ====================
