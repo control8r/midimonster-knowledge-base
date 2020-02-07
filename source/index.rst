@@ -11,7 +11,9 @@ Welcome to MidiMonster Knowledge Base!
    :hidden:
    :maxdepth: 1
    :glob:
-
+   
+   general/What-is-midimonster.rst
+   general/Installation.rst
    general/*
 
 
