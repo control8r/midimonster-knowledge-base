@@ -19,7 +19,7 @@ before publishing it in the main repository and from there on the MIDIMonster ho
 
 Please note that all text and code in this repository is licensed under the BSD 2-Clause
 License. To have your contributions be accepted, you need to agree that they are placed
-unter that same license.
+under that same license.
 
 All project logos that may be referenced within this repository are property of the
 respective project.
