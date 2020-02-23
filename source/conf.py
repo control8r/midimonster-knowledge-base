@@ -94,7 +94,7 @@ html_context = {
     'github_version': 'master',
     'conf_py_path': '/source/'
 }
-html_show_copyright = False
+html_show_copyright = True
 html_favicon = '_static/favicon.ico'
 
 # Theme options are theme-specific and customize the look and feel of a theme
