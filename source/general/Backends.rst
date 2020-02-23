@@ -13,7 +13,7 @@
 Backends?
 =========
 
-Each protocol supported by MIDIMonster is implemented by a backend, which takes global protocol-specific options and provides instances, which can be configured further.
+Each protocol supported by **MIDIMonster** is implemented by a backend, which takes global protocol-specific options and provides instances, which can be configured further.
 
 The configuration is stored in a file with a format very similar to the common INI file format. A section is started by a header in ``[]`` braces, followed by lines of the form option = value.
 
@@ -84,14 +84,12 @@ Every backend includes specific documentation, including the global and instance
 configuration options, channel specification syntax and any known problems or other
 special information.
 
-1. Artnet_
-2. evdev_
-3. jack_
-4. loopback_
-5. lua_
-6. maweb_
-7. midi_
-8. ola_
-9. osc_
-10. sacn_
-11. winmidi_
+Network IO:     Artnet_     sacn_     maweb_    osc_
+
+Hardware IO:             evdev_     jack_     midi_    winmidi_
+
+Programming:    lua_
+
+Virtual:        loopback_
+
+Multi:          ola_
