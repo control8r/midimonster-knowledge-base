@@ -1,5 +1,5 @@
 .. _ArtNet: ../midimonster/backends/artnet.html
-.. _`evdev Input Devices``: ../midimonster/backends/evdev.html
+.. _`evdev Input Devices`: ../midimonster/backends/evdev.html
 .. _JACK: ../midimonster/backends/jack.html
 .. _Loopback: ../midimonster/backends/loopback.html
 .. _Lua: ../midimonster/backends/lua.html
