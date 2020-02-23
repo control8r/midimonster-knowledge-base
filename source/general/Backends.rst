@@ -13,9 +13,9 @@
 What are backends?
 ==================
 
-Each protocol supported by **MIDIMonster** is implemented by a backend, which comes as a shared
-library file (`.so` on Linux/OSX, `.dll` on Windows). This allows the developers to be extend the
-project with new protocols, without having to change core code all the time.
+Each protocol supported by **MIDIMonster** is provided by a backend, which comes as a shared
+library file (`.so` on Linux/OSX, `.dll` on Windows). This allows the developers to extend the
+project with new protocols without having to touch core code all the time.
 
 Backends take global protocol-specific options and provide instances, which can be configured further.
 These instances then provide the channels you can map to eachother to translate values.
