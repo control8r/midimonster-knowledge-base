@@ -4,23 +4,29 @@ Welcome to the ``MIDIMonster`` Knowledge Base!
 
 First of all: What is **MIDIMonster**?
 -------------------------------------
-   **MIDIMonster** is a universal control and translation tool that can translate multi-channel absolute-value-based control and/or bus protocols.
-   Especially the stage & show control world uses a lot of different protocols of this type to control for example lights, instruments and effects.
+   **MIDIMonster** is a universal control and translation tool for multi-channel absolute-value-based control and/or bus protocols.
+
+   Especially the stage & show control world uses a lot of different protocols of this type, for example to control stage lighting,
+   musical instruments and all kinds of effects.
+
    **MIDIMonster** can also be used as scripting and control environment to generate new and modify existing control data on any of the supported
    protocols.
 
 What can **MIDIMonster** do?
 ----------------------------
    If you've ever found yourself in the situation of having to connect a device speaking one protocol (for example, a MIDI keyboard) to
-   a device speaking another one (such as a lighting desk), **MIDIMonster** can be the middleman, translating as you need it between all
-   the supported protocols.
-   This way, you can build and extend your system with the control surfaces you like, just the way you like them.
+   a device speaking another one (such as a lighting desk), **MIDIMonster** can help you!
+   
+   It provides a simple way to translate the events between all the supported protocols, just as you need it.
 
-   Thats not all you can do with the **MIDIMonster** though, as you can also dynamically generate, program, reroute and modify
-   any signals on those protocols to your hearts content, giving you complete freedom over your show setup.
+   This way, you can build and extend your system with the control surfaces you like, configured just the way you like them.
+
+   Thats not all you can do with the **MIDIMonster** though - you can also dynamically generate, program, reroute and modify
+   any signals on those protocols. This gives you complete freedom over your show setup.
+
    For example, if you need parts of your show to run on autopilot, want to switch control of channels between consoles using
    simple channel logic, use your gamepad to control the pitch of your synthesizer - these are all things made possible with
-   the clever configuration and programming :)
+   the **MIDIMonster** and some clever configuration and programming, :)
 
    **MIDIMonster** can do much more!
    Come find some examples and real usecases under ``Usecases``!
@@ -33,7 +39,6 @@ Do you need ``HELP``? or found a ``BUG``?
    IRC on `Hackint in #midimonster <https://webirc.hackint.org/#irc://irc.hackint.org/#midimonster>`_.
 
          ***We are happy to hear from you!***
-
 
 Contributing
 ------------
