@@ -5,16 +5,25 @@ Welcome to the ``MIDIMonster`` Knowledge Base!
 First of all what is **MIDIMonster**?
 -------------------------------------
    **MIDIMonster** is a universal control and translation tool that can translate multi-channel absolute-value-based control and/or bus protocols.
-
-
+   Especially the stage & show control world uses a lot of different protocols of this type to control for example lights, instruments and effects.
+   **MIDIMonster** can also be used as scripting and control environment to generate new and modify existing control data on any of the supported
+   protocols.
 
 What can **MIDIMonster** do?
 ----------------------------
-   You can use **MIDIMonster** for example with an lightconsole and some kind of midi controller, to expand your fader or button count.
-      
-      But that`s not all! **MIDIMonster** can do much more!
-         You can finde some examples and real usecases under ``Usecases``.
+   If you've ever found yourself in the situation of having to connect a device speaking one protocol (for example, a MIDI keyboard) to
+   a device speaking another one (such as a lighting desk), **MIDIMonster** can be the middleman, translating as you need it between all
+   the supported protocols.
+   This way, you can build and extend your system with the control surfaces you like, just the way you like them.
 
+   Thats not all you can do with the **MIDIMonster** though, as you can also dynamically generate, program, reroute and modify
+   any signals on those protocols to your hearts content, giving you complete freedom over your show setup.
+   For example, if you need parts of your show to run on autopilot, want to switch control of channels between consoles using
+   simple channel logic, use your gamepad to control the pitch of your synthesizer - these are all things made possible with
+   the clever configuration and programming :)
+
+   **MIDIMonster** can do much more!
+   Come find some examples and real usecases under ``Usecases``!
 
 Do you need ``HELP``? or found a ``BUG``?
 -------------------------------------
@@ -29,11 +38,9 @@ Do you need ``HELP``? or found a ``BUG``?
 Contributing
 ------------
 
-   If you like **MIDIMonster** and have found a usecase for it, we would be happy if you could share your experience and knowledge here.
-
-   To do so, go to our `Github repository <https://github.com/control8r/midimonster-knowledge-base>`_ and add some documentation about your solution.
-
-
+   If you like **MIDIMonster** and have found a usecase for it, we would be happy if you could share your experience and knowledge here!
+   Just create an article in our `Github repository <https://github.com/control8r/midimonster-knowledge-base>`_ and tell us all about your
+   adventures and ideas!
 
 .. toctree::
    :caption: General
