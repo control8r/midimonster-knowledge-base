@@ -124,10 +124,6 @@ html_sidebars = {
     ]
 }
 
-# sphinx-notfound-page
-# https://github.com/rtfd/sphinx-notfound-page
-notfound_no_urls_prefix = True
-
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
