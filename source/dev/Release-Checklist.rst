@@ -12,6 +12,7 @@ Before tagging a release
    * Make sure the software builds under all supported systems
    * Run a recent build through Coverity Scan
    * Check for open issues that should be included in the next release
+   * Check that all hardcoded version numbers are correct for the new release
 
 * Documentation
    * Make sure the README is up to date and reflects the current state of the software
@@ -24,3 +25,4 @@ Before tagging a release
 * Artifacts
    * Update the debianization on the `debian/master` branch
       * Build a new Debian package using `gbp buildpackage`
+

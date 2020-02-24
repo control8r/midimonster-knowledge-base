@@ -1,26 +1,29 @@
-.. _Artnet: ../midimonster/backends/artnet.html
-.. _evdev: ../midimonster/backends/evdev.html
-.. _jack: ../midimonster/backends/jack.html
-.. _loopback: ../midimonster/backends/loopback.html
-.. _lua: ../midimonster/backends/lua.html
-.. _maweb: ../midimonster/backends/maweb.html
-.. _midi: ../midimonster/backends/midi.html
-.. _ola: ../midimonster/backends/ola.html
-.. _osc: ../midimonster/backends/osc.html
-.. _sacn: ../midimonster/backends/sacn.html
-.. _winmidi: ../midimonster/backends/winmidi.html
+.. _ArtNet: ../midimonster/backends/artnet.html
+.. _`evdev Input Devices`: ../midimonster/backends/evdev.html
+.. _JACK: ../midimonster/backends/jack.html
+.. _Loopback: ../midimonster/backends/loopback.html
+.. _Lua: ../midimonster/backends/lua.html
+.. _`MA Lighting GrandMA2`: ../midimonster/backends/maweb.html
+.. _`ALSA MIDI`: ../midimonster/backends/midi.html
+.. _OLA: ../midimonster/backends/ola.html
+.. _OSC: ../midimonster/backends/osc.html
+.. _sACN: ../midimonster/backends/sacn.html
+.. _`Windows MIDI`: ../midimonster/backends/winmidi.html
 
-Backends?
-=========
+What are backends?
+==================
 
-Each protocol supported by **MIDIMonster** is implemented by a backend, which takes global protocol-specific options and provides instances, which can be configured further.
+Each protocol supported by **MIDIMonster** is provided by a backend, which comes as a shared
+library file (`.so` on Linux/OSX, `.dll` on Windows). This allows the developers to extend the
+project with new protocols without having to touch core code all the time.
 
-The configuration is stored in a file with a format very similar to the common INI file format. A section is started by a header in ``[]`` braces, followed by lines of the form option = value.
+Backends take global protocol-specific options and provide instances, which can be configured further.
+These instances then provide the channels you can map to eachother to translate values.
 
-Lines starting with a semicolon are treated as comments and ignored. Inline comments are not currently supported.
+For example, the ArtNet backend provides global options for the adresses it is supposed to listen on and
+provides instances for each universe it receives or sends.
 
 Example configuration files may be found at our Github at `/configs <https://github.com/cbdevnet/midimonster/tree/master/configs>`_.
-
 
 Backend and instance configuration
 ----------------------------------
@@ -42,41 +45,6 @@ arguments using the syntax ``-b <backend>.<option>=<value>`` for backend options
 and ``-i <instance>.<option>=<value>`` for instance options. These overrides
 are applied when the backend/instance is first mentioned in the configuration file.
 
-Channel mapping
----------------
-
-The ``[map]`` section consists of lines of channel-to-channel assignments, reading like
-::
-
-  instance.channel-a < instance.channel-b
-  instance.channel-a > instance.channel-b
-  instance.channel-c <> instance.channel-d
-
-The first line above maps any event originating from ``instance.channel-b`` to be output
-on ``instance.channel-a`` (right-to-left mapping).
-
-The second line makes that mapping a bi-directional mapping, so both of those channels
-output eachothers events.
-
-The last line is a shorter way to create a bi-directional mapping.
-
-Multi-channel mapping
----------------------
-
-To make mapping large contiguous sets of channels easier, channel names may contain
-expressions of the form ``{<start>..<end>}``, with *start* and *end* being positive integers
-delimiting a range of channels. Multiple such expressions may be used in one channel
-specification, with the rightmost expression being incremented (or decremented) first for
-evaluation.
-
-Both sides of a multi-channel assignment need to have the same number of channels, or one
-side must have exactly one channel.
-
-Example multi-channel mapping:
-::
-
-  instance-a.channel{1..10} > instance-b.{10..1}
-
 Backend documentation
 ---------------------
 
@@ -84,12 +52,21 @@ Every backend includes specific documentation, including the global and instance
 configuration options, channel specification syntax and any known problems or other
 special information.
 
-Network IO:     Artnet_     sacn_     maweb_    osc_
+Network Protocols:
+   * ArtNet_
+   * sACN_
+   * OSC_
 
-Hardware IO:             evdev_     jack_     midi_    winmidi_
+Interfaces to other controllers:
+   * `MA Lighting GrandMA2`_
+   * OLA_
 
-Programming:    lua_
+Hardware Interfaces:
+   * `evdev Input Devices`_
+   * JACK_
+   * `ALSA MIDI`_
+   * `Windows MIDI`_
 
-Virtual:        loopback_
-
-Multi:          ola_
+Programming & Simplicity:
+   * Lua_
+   * Loopback_
