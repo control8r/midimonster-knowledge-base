@@ -13,6 +13,7 @@ Before tagging a release
    * Run a recent build through Coverity Scan
    * Check for open issues that should be included in the next release
    * Check that all hardcoded version numbers are correct for the new release
+      * This mainly concerns `midimonster.h` and `midimonster.rc`
 
 * Documentation
    * Make sure the README is up to date and reflects the current state of the software
@@ -21,6 +22,9 @@ Before tagging a release
       * This includes known bugs & problems
    * Check that the manpage contains up to date and correct information
    * Check that the knowledge base does not make statements that directly contradict the current mainline documentation
+
+After tagging a release
+-----------------------
 
 * Artifacts
    * Update the debianization on the `debian/master` branch
