@@ -85,7 +85,7 @@ html_theme_options = {
     'collapse_navigation': True
 }
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_last_updated_fmt = '%b %d, %Y'
+#html_last_updated_fmt = '%b %d, %Y'
 html_context = {
     'css_files': ['_static/css/custom.css'],
     'display_github': True,
@@ -112,6 +112,10 @@ html_logo = "midimonster/MIDIMonster.svg"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = [
+    'custom.css',
+]
+
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
@@ -123,10 +127,6 @@ html_sidebars = {
         'searchbox.html',
     ]
 }
-
-# sphinx-notfound-page
-# https://github.com/rtfd/sphinx-notfound-page
-notfound_no_urls_prefix = True
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

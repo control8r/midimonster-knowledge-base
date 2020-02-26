@@ -1,9 +1,9 @@
 Welcome to the ``MIDIMonster`` Knowledge Base!
-======================================
+==============================================
 
 
 First of all: What is **MIDIMonster**?
--------------------------------------
+--------------------------------------
    **MIDIMonster** is a universal control and translation tool for multi-channel absolute-value-based control and/or bus protocols.
 
    Especially the stage & show control world uses a lot of different protocols of this type, for example to control stage lighting,
@@ -33,7 +33,7 @@ What can **MIDIMonster** do?
    Come find some examples and real usecases under ``Usecases``!
 
 Do you need ``HELP``? or found a ``BUG``?
--------------------------------------
+-----------------------------------------
 
    If you encounter a bug or suspect a problem with a a protocol implementation, please
    `open an Issue <https://github.com/cbdevnet/midimonster/issues>`_ or get in touch with us via
@@ -95,7 +95,7 @@ Contributing
    :maxdepth: 1
    :glob:
 
-   dev/Release-checklist.rst
+   dev/Release-Checklist.rst
    dev/*
 
 
