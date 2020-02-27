@@ -8,6 +8,7 @@
 .. _OLA: ../midimonster/backends/ola.html
 .. _OSC: ../midimonster/backends/osc.html
 .. _sACN: ../midimonster/backends/sacn.html
+.. _OpenPixelControl: ../midimonster/backends/openpixelcontrol.html
 .. _`Windows MIDI`: ../midimonster/backends/winmidi.html
 
 What are backends?
@@ -56,6 +57,7 @@ Network Protocols:
    * ArtNet_
    * sACN_
    * OSC_
+   * OpenPixelControl_
 
 Interfaces to other controllers:
    * `MA Lighting GrandMA2`_
