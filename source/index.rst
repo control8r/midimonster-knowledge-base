@@ -109,5 +109,4 @@ Contributing
 
    Repository <https://github.com/control8r/midimonster-knowledge-base>
    Changelog <https://github.com/control8r/midimonster-knowledge-base/commits/master>
-   Legal Notice <https://github.com/control8r/midimonster-knowledge-base>
-   Privacy <https://github.com/control8r/midimonster-knowledge-base>
+   Legal Notice <https://midimonster.net/impressum.html>
