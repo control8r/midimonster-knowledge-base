@@ -66,15 +66,16 @@ Contributing
    :glob:
 
    midimonster/backends/artnet.md
+   midimonster/backends/sacn.md
+   midimonster/backends/midi.md
+   midimonster/backends/maweb.md
    midimonster/backends/evdev.md
-   midimonster/backends/jack.md
+   midimonster/backends/osc.md
    midimonster/backends/loopback.md
    midimonster/backends/lua.md
-   midimonster/backends/maweb.md
-   midimonster/backends/midi.md
+   midimonster/backends/python.md
    midimonster/backends/ola.md
-   midimonster/backends/osc.md
-   midimonster/backends/sacn.md
+   midimonster/backends/jack.md
    midimonster/backends/openpixelcontrol.md
    
    midimonster/backends/winmidi.md

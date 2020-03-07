@@ -2,7 +2,7 @@
 .. _`evdev Input Devices`: ../midimonster/backends/evdev.html
 .. _JACK: ../midimonster/backends/jack.html
 .. _Loopback: ../midimonster/backends/loopback.html
-.. _Lua: ../midimonster/backends/lua.html
+.. _Lua programming: ../midimonster/backends/lua.html
 .. _`MA Lighting GrandMA2`: ../midimonster/backends/maweb.html
 .. _`ALSA MIDI`: ../midimonster/backends/midi.html
 .. _OLA: ../midimonster/backends/ola.html
@@ -10,6 +10,7 @@
 .. _sACN: ../midimonster/backends/sacn.html
 .. _OpenPixelControl: ../midimonster/backends/openpixelcontrol.html
 .. _`Windows MIDI`: ../midimonster/backends/winmidi.html
+.. _`Python programming`: ../midimonster/backends/python.html
 
 What are backends?
 ==================
@@ -70,5 +71,6 @@ Hardware Interfaces:
    * `Windows MIDI`_
 
 Programming & Simplicity:
-   * Lua_
+   * `Lua programming`_
+   * `Python programming`_
    * Loopback_
