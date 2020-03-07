@@ -75,7 +75,8 @@ Contributing
    midimonster/backends/ola.md
    midimonster/backends/osc.md
    midimonster/backends/sacn.md
-
+   midimonster/backends/openpixelcontrol.md
+   
    midimonster/backends/winmidi.md
    midimonster/backends/*
 
