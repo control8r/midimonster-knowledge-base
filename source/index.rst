@@ -107,6 +107,6 @@ Contributing
    :maxdepth: 1
    :glob:
 
-   Repository <https://github.com/control8r/midimonster-knowledge-base>
-   Changelog <https://github.com/control8r/midimonster-knowledge-base/commits/master>
+   Knowledge Base Repository <https://github.com/control8r/midimonster-knowledge-base>
+   MIDIMonster Repository <https://github.com/cbdevnet/midimonster>
    Legal Notice <https://midimonster.net/impressum.html>
