@@ -20,6 +20,9 @@ To use it, just run the following commands on your machine as the root user:
  chmod +x ./installer.sh
  ./installer.sh
 
+
+The installer can also be used for automating installations or upgrades by specifying additional command line arguments. To see a list of valid arguments, run the installer with the ``--help`` argument.
+
 ====================
 Building from source
 ====================
