@@ -76,6 +76,7 @@ Contributing
    midimonster/backends/python.md
    midimonster/backends/ola.md
    midimonster/backends/jack.md
+   midimonster/backends/rtpmidi.md
    midimonster/backends/openpixelcontrol.md
    
    midimonster/backends/winmidi.md
@@ -88,6 +89,7 @@ Contributing
    :maxdepth: 1
    :glob:
 
+   usecases/MAweb-midi.rst
    usecases/*
 
 

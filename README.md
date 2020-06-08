@@ -45,6 +45,15 @@ distribution, you can install the following packages using `apt-get`:
 * python3-sphinx
 * python3-recommonmark
 * python3-sphinx-rtd-theme
+* python3-pip
+
+There are a few dependencies without an coresponding package. (If you installed all dependencies without any package via pip you're good to go.)
+
+```shell
+$ virtualenv venv --python=python3.7
+$ source venv/bin/activate
+$ pip install -r requirements-apt.txt
+```
 
 If your distribution does not provide these or equivalent packages, you can also install
 the packages using `pip` by running
