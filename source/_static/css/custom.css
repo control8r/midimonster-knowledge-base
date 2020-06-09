@@ -4,3 +4,7 @@
 .wy-side-nav-search > a img.logo, .wy-side-nav-search .wy-dropdown > a img.logo {
     max-width: 75%;
 }
+
+body {
+	font-family: sans-serif;
+}

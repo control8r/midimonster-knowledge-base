@@ -18,6 +18,8 @@ Before tagging a release
    * |check| Check for open issues that should be included in the next release
    * |check| Check that all hardcoded version numbers are correct for the new release
       * This mainly concerns `midimonster.h` and `midimonster.rc`
+   * |check| Run a complete build with the `DEBUG` option enabled
+   * |check| Ensure that all backends are built without the `DEBUG` define
 
 * Documentation
    * |check| Make sure the README is up to date and reflects the current state of the software
@@ -35,6 +37,5 @@ After tagging a release
 
 * Artifacts
    * |check| Update the debianization on the `debian/master` branch
-
       * |check| Build a new Debian package using `gbp buildpackage`
 
