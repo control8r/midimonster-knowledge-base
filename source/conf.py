@@ -35,7 +35,6 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
 source_suffix = ['.rst', '.md']
 
 from recommonmark.parser import CommonMarkParser
@@ -68,7 +67,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['midimonster/README.md', 'midimonster/DEVELOPMENT.md']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -79,10 +78,17 @@ todo_include_todos = False
 # -- Options for HTML output -------------------------------------------------
 
 html_theme = 'sphinx_rtd_theme'
+
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#
+
 html_theme_options = {
     'display_version': False,
     'navigation_depth': 2,
-    'collapse_navigation': True
+    'collapse_navigation': True,
+    'prev_next_buttons_location': None,
 }
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 #html_last_updated_fmt = '%b %d, %Y'
@@ -92,19 +98,10 @@ html_context = {
     'github_user': 'control8r',
     'github_repo': 'midimonster-knowledge-base',
     'github_version': 'master',
-    'conf_py_path': '/source/'
+    'conf_py_path': '/source/',
 }
 html_show_copyright = True
 html_favicon = '_static/favicon.ico'
-
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#
-html_theme_options = {
-    'prev_next_buttons_location': None
-}
-
 html_logo = "midimonster/MIDIMonster.svg"
 
 # Add any paths that contain custom static files (such as style sheets) here,
