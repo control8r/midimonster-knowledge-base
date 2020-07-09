@@ -12,3 +12,7 @@ body {
 .wy-table-responsive > table > tbody > tr > td{
     white-space: normal;
 }
+
+.section > div[class^=highlight]{
+    max-width: 65%;
+}
