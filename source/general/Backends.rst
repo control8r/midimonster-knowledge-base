@@ -11,6 +11,7 @@
 .. _OpenPixelControl: ../midimonster/backends/openpixelcontrol.html
 .. _`Windows MIDI`: ../midimonster/backends/winmidi.html
 .. _`Python programming`: ../midimonster/backends/python.html
+.. _`rtpMIDI`: ../midimonster/backends/rtpmidi.html
 
 What are backends?
 ==================
@@ -59,6 +60,7 @@ Network Protocols:
    * sACN_
    * OSC_
    * OpenPixelControl_
+   * rtpMIDI_
 
 Interfaces to other controllers:
    * `MA Lighting GrandMA2`_
