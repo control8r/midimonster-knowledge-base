@@ -41,6 +41,7 @@ Testing
 Publish
 -------
 
+* Add the backend to the default target list in the backends makefile
 * Add the new backend to the main README
    * Add to the initial backend overview, including the new backends target operating systems
    * Add to the `backend documentation` section
