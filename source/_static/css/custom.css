@@ -1,5 +1,5 @@
 .wy-nav-content {
-    max-width: none;
+    max-width: max-content;
 }
 .wy-side-nav-search > a img.logo, .wy-side-nav-search .wy-dropdown > a img.logo {
     max-width: 75%;
@@ -7,4 +7,12 @@
 
 body {
 	font-family: sans-serif;
+}
+
+.wy-table-responsive > table > tbody > tr > td{
+    white-space: normal;
+}
+
+.section > div[class^=highlight]{
+    max-width: 65%;
 }

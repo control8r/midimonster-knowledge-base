@@ -1,1 +1,1 @@
-sphinx-markdown-tables==0.0.12
+sphinx-markdown-tables==0.0.15
