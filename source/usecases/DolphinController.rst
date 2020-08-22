@@ -6,7 +6,7 @@ In this article, I'm going to show you how to play console games (via an emulato
 This example can be extended to create new controller types, input methods or to script game input using the
 programming backends to play automatically or semi-automatically.
 
-In this example I'm using
+In this example, I'm using
 
    - MIDIMonster v0.5 on Debian 10.4
    - Dolphin 5.0 from the Debian repositories
