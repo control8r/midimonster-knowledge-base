@@ -190,7 +190,7 @@ This configuration will work on any operating system the MIDIMonster supports.
 
 To run the MIDIMonster with this (or any other specific configuration) on Windows,
 the simplest way is to just drag-and-drop the configuration file onto the `midimonster.exe`
-file in the `download package <https://github.com/cbdevnet/midimonster/releases>`.
+file in the `download package <https://github.com/cbdevnet/midimonster/releases>`_.
 
 On other operating systems, most of the time that will work too - otherwise, you can
 open a terminal, navigate to the folder containing the MIDIMonster binary and run
