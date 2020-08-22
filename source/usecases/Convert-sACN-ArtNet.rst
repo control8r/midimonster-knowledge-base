@@ -31,9 +31,9 @@ In this example, I'm using the IPv4 network 10.10.10.0/24, with the MIDIMonster
 computer being assigned 10.10.10.1, and an example ArtNet target at 10.10.10.2.
 
 Another thing to note is that sACN by default relies on multicast networking.
-The MIDIMonster `sacn` backend is able to run in both unicast (directly talking
-to peers) and broadcast (talking to all hosts on the local network), too,
-but using unicast is very convenient for sACN, as we do not need to configure
+The MIDIMonster `sacn` backend is also able to run in both unicast (directly talking
+to peers) and broadcast (talking to all hosts on the local network) modes, too,
+but using multicast is very convenient for sACN, as we do not need to configure
 as many IP addresses.
 
 To use the multicast features of sACN, all the hardware in the path (mainly switches)
