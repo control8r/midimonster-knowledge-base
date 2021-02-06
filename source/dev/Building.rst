@@ -2,7 +2,7 @@ Building the MIDIMonster
 ========================
 
 This document is intended to serve as a documentation for anyone interested in building
-the provided source code of the MIDIMonster.
+the provided source code of the MIDIMonster. It is not yet finished.
 
 The MIDIMonster build system is very much targeted towards command-line, unix-oid systems,
 stemming from the developers preference for working with Linux systems. This has the additional
