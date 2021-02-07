@@ -2,7 +2,9 @@ Building the MIDIMonster
 ========================
 
 This document is intended to serve as point of reference for anyone interested in building
-the provided source code of the MIDIMonster. It is not yet finished.
+the provided source code of the MIDIMonster. It is not yet finished. It essentially is a
+long-form version of the build instructions contained in `the repository's README file <>`_.
+In case of conflicting information, the repository README is the canonical source.
 
 The MIDIMonster build system is very much targeted towards command-line, unix-oid systems,
 stemming from the developers preference for working with Linux systems. This has the additional
@@ -201,6 +203,12 @@ The core executable requires linking against `libdl` (using the `-ldl` linker fl
 to load plugins (the backends) at runtime. The `-Wl,-export-dynamic` linker flag adds the plugin-accessible API to the
 dynamic symbol table, so it can be used from runtime-loaded plugins.
 
+As a side note for the Windows build, the core compilation is made to output an import library using the
+parameter `-Wl,--out-implib,libmmapi.a`. This import library is required by the backend compilation to allow
+linking the backend plugins against the core API. Additionally, a resource file containing an application icon
+is compiled for the Windows target, to allow the resulting executable to have the MIDIMonster logo as an icon,
+as well as contain additional metadata such as the current version number.
+
 Building a backend
 ^^^^^^^^^^^^^^^^^^
 All backends consist of C header file, a C source file, and a markdown document containing the backend
@@ -235,7 +243,10 @@ or::
 	make clean
 	TASK=windows DEPLOY=1 ./.ci.sh
 
-to create an archive containing binary distribution files in the `deploy/` subdirectory.
+to create an archive containing binary distribution files in the `deploy/` subdirectory. These archives
+will contain the core executables, the compiled backend plugins as well as the documentation files.
+For the Windows build, the resulting binaries will be stripped of debugging information to reduce the
+resulting filesize.
 
 Building Debian Packages
 ------------------------
@@ -262,5 +273,29 @@ Run the package build process using the command::
 
 After some time, you should have functional `.deb` Debian packages in the parent folder.
 
-Discussion of the makefile
---------------------------
+Discussion of the makefiles
+---------------------------
+This section will discuss some implementation details of the `makefiles` supplied in the MIDIMonster
+repository. This may be of interest to people porting the build system as well as to integrators and
+packagers that want to exert additional control over the build steps.
+
+This section is split into various subsections, each dealing with different parts of the two major
+`makefiles`.
+
+Main `makefile`, initialization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Main `makefile`, meta targets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Main `makefile`, build targets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Backend `makefile`, initialization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Backend `makefile`, per-backend initialization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Backend `makefile`, generic rules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
