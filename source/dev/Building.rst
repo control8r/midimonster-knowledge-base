@@ -1,7 +1,7 @@
 Building the MIDIMonster
 ========================
 
-This document is intended to serve as a documentation for anyone interested in building
+This document is intended to serve as point of reference for anyone interested in building
 the provided source code of the MIDIMonster. It is not yet finished.
 
 The MIDIMonster build system is very much targeted towards command-line, unix-oid systems,
@@ -56,28 +56,22 @@ use that account to build the MIDIMonster. However if you intend to use the syst
 things, the build steps can be performed by any nonprivileged user.
 
 As the `root` user, install the tools required for the basic compilation of software written
-in C as well as the `git` source control system using the following command:
+in C as well as the `git` source control system using the following command::
 
-```
-apt-get install build-essential pkg-config git
-```
+	apt-get install build-essential pkg-config git
 
 Fetch a copy of the source code repository by cloning it using `git`. Run this command as the
 user you want to use for the build process and in a directory belonging to that user (a user's
-`home` directory is commonly used for that purpose):
+`home` directory is commonly used for that purpose)::
 
-```
-git clone https://github.com/cbdevnet/midimonster
-```
+	git clone https://github.com/cbdevnet/midimonster
 
 Install the required software dependencies of the MIDIMonster, again as the `root` user. The
 list of dependencies may change in time when new backends are added, requiring new dependencies, or
 dependencies may release newer versions. As this guide is not maintained in lockstep with main
-repository, check the main `README` file for an up-to-date list.
+repository, check the main `README` file for an up-to-date list::
 
-```
-apt-get install libasound2-dev libevdev-dev liblua5.3-dev libola-dev libjack-jackd2-dev libssl-dev python3-dev
-```
+	apt-get install libasound2-dev libevdev-dev liblua5.3-dev libola-dev libjack-jackd2-dev libssl-dev python3-dev
 
 Some of these dependencies add up to quite some space. For experienced users who may not want to
 build all supported backends, it is possible to only install the dependencies required for the
@@ -91,35 +85,29 @@ employs a cross-compilation process from Linux, directly producing PE-format exe
 (`.exe` files for executables, `.dll` files for plugins and libraries).
 
 Follow the prerequisite steps for the Linux (on Linux) build, and additionally install the
-package `mingw-w64`, which contains the cross-compiler for Windows using the command
+package `mingw-w64`, which contains the cross-compiler for Windows using the command::
 
-```
-apt-get install mingw-w64
-```
+	apt-get install mingw-w64
 
 To build the Lua backend for Windows, a copy of the `lua53.dll` binary is required. For various
 reasons, this file can and will not be supplied with the MIDIMonster itself. Acquire a copy of the
-file (for example from the [luabinaries project](http://luabinaries.sourceforge.net/download.html)
+file (for example from the `luabinaries project <http://luabinaries.sourceforge.net/download.html>`_
 and place it into the project root directory.
 
 To build the MIDIMonster for OSX (on OSX)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 OSX has it's own way of doing many things, which unfortunately includes such basic tasks as setting
 up a workable development environment. Instructions on how to set up the `brew` package manager may
-be found on that [project's homepage](https://brew.sh/).
+be found on that `project's homepage <https://brew.sh/>`_.
 
-Once that has been done, install the software dependencies for the MIDIMonster using
+Once that has been done, install the software dependencies for the MIDIMonster using::
 
-```
-brew install ola lua openssl jack python3
-```
+	brew install ola lua openssl jack python3
 
 If your system still has an installation of a Python 2.7 release, you may need to overwrite that
-using the command
+using the command::
 
-```
-brew link --overwrite python
-```
+	brew link --overwrite python
 
 Using the makefile
 ------------------
