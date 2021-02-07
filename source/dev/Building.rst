@@ -111,8 +111,8 @@ using the command::
 
 	brew link --overwrite python
 
-Using the makefile
-------------------
+Building using the makefile
+---------------------------
 
 The `makefile` is an instruction file for the `make` utility. It contains the steps required
 to build the final binaries for the MIDIMonster and, implicitly, the order in which to take them.
@@ -120,7 +120,6 @@ This guide will take a closer look at the architecture of the `makefile` in a la
 
 Building for Linux
 ^^^^^^^^^^^^^^^^^^
-
 To run the build steps for a Linux version, just run `make`. This will implicitly call make with
 the `all` target, building the core as well as all backends that are configured for Linux compatibility.
 
@@ -148,7 +147,6 @@ The `makefile` provides additional targets, some of which are discussed in a lat
 
 Building for Windows
 ^^^^^^^^^^^^^^^^^^^^
-
 The `makefile` provides a target named `windows`, which overwrites some of the variables for the build
 process with values that result in a cross-compiler being used, as well as performing some Windows-specific
 steps. When executing::
@@ -161,7 +159,6 @@ later in this document, or run using an emulator.
 
 Building for OSX
 ^^^^^^^^^^^^^^^^
-
 The OSX build is conceptually very similar to the Linux build, in that it uses the same tooling, albeit
 with a different default compiler as OSX uses `clang` by default. Additionally, the `openssl` library, which
 is used for the `maweb` backend, has some issues on OSX, which require the following commands to be run
@@ -177,9 +174,52 @@ build the MIDIMonster OSX binaries.
 
 Building manually
 -----------------
-
 This section will describe the basic build steps which are encoded in the `makefile`. It will focus on the
-Linux build for this purpose. Other systems follow similar protocols.
+Linux build for this purpose. Other systems follow similar protocols. If your main interest is in experimenting
+with the source code, this section will not be of interest. If you are interested in integrating new build
+systems or porting the build to another system, this section may hold value.
+
+Building the core
+^^^^^^^^^^^^^^^^^
+The core consists of a set of object files. These can be found in the `makefile` as the assignment to the
+`OBJS` variable. At the time of this writing, the object files are `config.o`, `backend.o` and `plugin.o`.
+
+Each of these object files is built from a corresponding C source file. Additionally, some of these depend
+on other source files within the core tree. The `makefile` supplies some additional arguments to hide non-API
+symbols from the export table for the compilation unit.
+
+A minimal compilation command for a single unit would look like this::
+
+	cc -c -o config.o config.c
+
+Once all the object files are built, they can be passed to the compilation of the core binary::
+
+	cc -Wl,-export-dynamic midimonster.c config.o backend.o plugin.o -ldl -o midimonster
+
+The core executable requires linking against `libdl` (using the `-ldl` linker flag), which provides the functionality
+to load plugins (the backends) at runtime. The `-Wl,-export-dynamic` linker flag adds the plugin-accessible API to the
+dynamic symbol table, so it can be used from runtime-loaded plugins.
+
+Building a backend
+^^^^^^^^^^^^^^^^^^
+All backends consist of C header file, a C source file, and a markdown document containing the backend
+documentation. Backends are shared objects (`.so` ELF files on Linux).
+
+A minimal invocation to build a single backend would be::
+
+	cc -fPIC -I../ backend.c -o backend.so -shared
+
+The `-fPIC` and `-shared` flags tell the compiler and linker to create runtime-loadable shared libraries.
+The additional include path (`-I../`) puts the `midimonster.h` API header file into the include search path
+for the backends.
+
+Most backends will require linking against their specific libraries (for example, `libasound`/`-lasound` for the
+`midi` backend).
+
+The network-based backends share a lot of overlapping code via a MIDIMonster-internal library
+called `libmmbackend`. This library can be built using the invocation::
+
+	cc -fPIC -I../ -c -o libmmbackend.o libmmbackend.c
 
 Creating release tarballs
 -------------------------
