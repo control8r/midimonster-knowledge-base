@@ -186,7 +186,8 @@ The core consists of a set of object files. These can be found in the `makefile`
 
 Each of these object files is built from a corresponding C source file. Additionally, some of these depend
 on other source files within the core tree. The `makefile` supplies some additional arguments to hide non-API
-symbols from the export table for the compilation unit.
+symbols from the export table for the compilation unit. When porting the build to a new system or environment,
+take care to include those as well to reduce API surface and avoid compatibility problems.
 
 A minimal compilation command for a single unit would look like this::
 
@@ -224,8 +225,42 @@ called `libmmbackend`. This library can be built using the invocation::
 Creating release tarballs
 -------------------------
 
+To create a binary distributable archive, the `.ci.sh` script has some automation prepared. Run::
+
+	make clean
+	TASK=linux DEPLOY=1 ./.ci.sh
+
+or::
+
+	make clean
+	TASK=windows DEPLOY=1 ./.ci.sh
+
+to create an archive containing binary distribution files in the `deploy/` subdirectory.
+
 Building Debian Packages
 ------------------------
+This section is of interest for people wanting to either sponsor/maintain the MIDIMonster for inclusion in the Debian
+distribution, or wanting to provide their own package repository including the MIDIMonster (for example, to facilitate
+mass installation across a fleet of systems).
+
+The MIDIMonster repository contains a branch with debianizations for tagged point releases. To build your
+own Debian package, install the `git-buildpackage` tool as root using::
+
+	apt-get install git-buildpackage
+
+Setting up a build system with correct signing keys, etc is out of the scope of this guide. Suffice to say, the process
+usually works without this setup.
+
+Check out the `debian/master` branch of the repository and make sure you have no uncommitted changes::
+
+	git checkout debian/master
+	git clean -fx
+
+Run the package build process using the command::
+
+	gbp buildpackage
+
+After some time, you should have functional `.deb` Debian packages in the parent folder.
 
 Discussion of the makefile
 --------------------------
