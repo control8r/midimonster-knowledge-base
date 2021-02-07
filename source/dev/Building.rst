@@ -29,7 +29,9 @@ to build the MIDIMonster on just about any platform with basic POSIX-compatibili
 This guide is not maintained in lockstep with the core code. It may, over time, diverge
 somewhat from what the actual build steps in the repository are, especially with respect
 to the dependency list as new backends are added. This guide will try to note locations where
-these diversions may be sooner rather than later.
+these diversions may be sooner rather than later. To see what steps the automated build system and
+the CI system is using, experienced users may wish to look at the `Makefiles` in both the project root
+as well as the `backends` subdirectory, as well as the `.ci.sh`  and `.travis.yml` files.
 
 Prerequisites
 -------------
@@ -91,7 +93,7 @@ package `mingw-w64`, which contains the cross-compiler for Windows using the com
 
 To build the Lua backend for Windows, a copy of the `lua53.dll` binary is required. For various
 reasons, this file can and will not be supplied with the MIDIMonster itself. Acquire a copy of the
-file (for example from the `luabinaries project <http://luabinaries.sourceforge.net/download.html>`_
+file (for example from the `luabinaries project <http://luabinaries.sourceforge.net/download.html>`_)
 and place it into the project root directory.
 
 To build the MIDIMonster for OSX (on OSX)
@@ -114,24 +116,70 @@ Using the makefile
 
 The `makefile` is an instruction file for the `make` utility. It contains the steps required
 to build the final binaries for the MIDIMonster and, implicitly, the order in which to take them.
+This guide will take a closer look at the architecture of the `makefile` in a later section.
 
 Building for Linux
-------------------
+^^^^^^^^^^^^^^^^^^
 
-Building for Linux
-------------------
+To run the build steps for a Linux version, just run `make`. This will implicitly call make with
+the `all` target, building the core as well as all backends that are configured for Linux compatibility.
+
+`make` will try to perform only necessary actions, skipping rebuilds of already built files where the
+source files have not been changed. To force a complete rebuild, the invocation::
+
+	make clean all
+
+may be used to perform a `clean` before building, thus forcing all binaries to be rebuilt.
+The `clean` target can also be used on it's own to clean up any binary files left from a build process.
+
+To build specific binaries, for example a single object file, `make` can be invoked like this::
+
+	make midimonster
+
+which will then only build the core binary, not the backends. In a similar fashion, only specific
+backends can be built within the `backends/` directory.
+
+The build process specified within the `makefile` takes a number of parameters using environment
+variables, among others the standard `CC`, `LDLIBS`, `CFLAGS` and `LDFLAGS` parameters. These can be
+used by experienced users as well as automated processes to influence the build process.
+Some of these variables are discussed in a later section of this document.
+
+The `makefile` provides additional targets, some of which are discussed in a later section.
 
 Building for Windows
---------------------
+^^^^^^^^^^^^^^^^^^^^
+
+The `makefile` provides a target named `windows`, which overwrites some of the variables for the build
+process with values that result in a cross-compiler being used, as well as performing some Windows-specific
+steps. When executing::
+
+	make windows
+
+the build process will compile the code to a set of Windows-specific files, including `midimonster.exe` and
+the backend shared libraries as DLL files. These can then be copied using either the deploy steps described
+later in this document, or run using an emulator.
 
 Building for OSX
-----------------
+^^^^^^^^^^^^^^^^
 
-export CFLAGS="$CFLAGS -I/usr/local/opt/openssl@1.1/include"
-export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
+The OSX build is conceptually very similar to the Linux build, in that it uses the same tooling, albeit
+with a different default compiler as OSX uses `clang` by default. Additionally, the `openssl` library, which
+is used for the `maweb` backend, has some issues on OSX, which require the following commands to be run
+before building as a workaround::
+
+	export CFLAGS="$CFLAGS -I/usr/local/opt/openssl@1.1/include"
+	export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
+
+This sets up some paths that are (to the knowledge of the author) not easily accessible via established
+protocols. Should you have further information on how to get this information programmatically, please
+contact the authors. After performing these workarounds, use the `make` command in the same terminal to
+build the MIDIMonster OSX binaries.
 
 Building manually
 -----------------
+
+This section will describe the basic build steps which are encoded in the `makefile`. It will focus on the
+Linux build for this purpose. Other systems follow similar protocols.
 
 Creating release tarballs
 -------------------------
