@@ -3,8 +3,9 @@ Building the MIDIMonster
 
 This document is intended to serve as point of reference for anyone interested in building
 the provided source code of the MIDIMonster. It is not yet finished. It essentially is a
-long-form version of the build instructions contained in `the repository's README file <>`_.
-In case of conflicting information, the repository README is the canonical source.
+long-form version of the build instructions contained in `the repository's README file
+<https://github.com/cbdevnet/midimonster/blob/master/README.md>`_. In case of conflicting
+information, the repository README is the canonical source.
 
 The MIDIMonster build system is very much targeted towards command-line, unix-oid systems,
 stemming from the developers preference for working with Linux systems. This has the additional
