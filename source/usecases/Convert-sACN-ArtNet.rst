@@ -1,3 +1,6 @@
+.. _`sacn backend documentation`: ../midimonster/backends/sacn.html
+.. _`artnet backend documentation`: ../midimonster/backends/artnet.html
+
 =========================
 Converting sACN to ArtNet
 =========================
@@ -51,7 +54,7 @@ Configuring sACN input
 **********************
 
 Let's begin with the sACN input part. As always, having a look at the `sacn backend
-documentation <https://github.com/cbdevnet/midimonster/blob/master/backends/sacn.md>`_
+documentation`_
 can save hours of experimentation ;)
 
 To receive sACN input, we need to specify which IP addresses (and optionally, which ports)
@@ -97,8 +100,7 @@ Configuring ArtNet output
 
 The ArtNet backend is very similar to the sACN backend, in that they both transfer lighting control
 data over the network and they share some internal architecture. They also have many similar
-configuration options, as we can see by checking out the `artnet backend documentation
-<https://github.com/cbdevnet/midimonster/blob/master/backends/artnet.md>`_.
+configuration options, as we can see by checking out the `artnet backend documentation`_.
 
 We're starting out with configuring the interfaces/IP addresses for the data output again::
 
@@ -190,7 +192,7 @@ This configuration will work on any operating system the MIDIMonster supports.
 
 To run the MIDIMonster with this (or any other specific configuration) on Windows,
 the simplest way is to just drag-and-drop the configuration file onto the `midimonster.exe`
-file in the `download package <https://github.com/cbdevnet/midimonster/releases>`_.
+file in the `download package <https://midimonster.net/download.html>`_.
 
 On other operating systems, most of the time that will work too - otherwise, you can
 open a terminal, navigate to the folder containing the MIDIMonster binary and run
