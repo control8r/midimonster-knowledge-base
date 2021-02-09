@@ -106,7 +106,7 @@ be found on that `project's homepage <https://brew.sh/>`_.
 
 Once that has been done, install the software dependencies for the MIDIMonster using::
 
-	brew install ola lua openssl jack python3
+	brew install pkg-config ola lua openssl jack python3
 
 If your system still has an installation of a Python 2.7 release, you may need to overwrite that
 using the command::

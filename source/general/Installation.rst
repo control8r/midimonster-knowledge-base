@@ -26,8 +26,12 @@ To use it, just run the following commands on your machine as the root user:
 
 The installer can also be used for automating installations or upgrades by specifying additional command line arguments. To see a list of valid arguments, run the installer with the ``--help`` argument.
 
+For some systems such as Debian Linux and Windows, binary packages exist for easy installation. You can download those either from our `file server <https://files.midimonster.net/>`_ or the `GitHub
+release page <https://github.com/cbdevnet/midimonster/releases>`_.
+
 ====================
 Building from source
 ====================
 
-If you want to build **MIDIMonster** of your own, look at our ``README`` in the `MIDIMonster repository <https://github.com/cbdevnet/midimonster#building-from-source>`_.
+If you want to build **MIDIMonster** from the source, for example to experiment with the code, port the MIDIMonster to a new platform, or to create your own backend,
+take a look at the `Development` section of the knowledge base, including the guide on `building the MIDIMonster from source <dev/Building.html>`_
