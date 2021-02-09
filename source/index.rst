@@ -89,7 +89,9 @@ Contributing
    :maxdepth: 1
    :glob:
 
-   usecases/MAweb-midi.rst
+   usecases/MAweb-midi-extension.rst
+   usecases/MultipageController.rst
+   usecases/DolphinController.rst
    usecases/*
 
 
@@ -100,6 +102,9 @@ Contributing
    :glob:
 
    dev/Release-Checklist.rst
+   dev/Backend-Checklist.rst
+   dev/Building.rst
+   dev/Contributing.rst
    dev/*
 
 
