@@ -1,3 +1,8 @@
+.. _`documentation`: ../general/Backends.html
+.. _`evdev backend`: ../midimonster/backends/evdev.html
+.. _`evdev backend documentation file`: ../midimonster/backends/evdev.html
+.. _`midi backend`: ../midimonster/backends/midi.html
+
 ==================================================
 Using the MIDIMonster as a Dolphin game controller
 ==================================================
@@ -8,9 +13,9 @@ programming backends to play automatically or semi-automatically.
 
 In this example, I'm using
 
-   - MIDIMonster v0.5 on Debian 10.4
-   - Dolphin 5.0 from the Debian repositories
-   - A Launch Control MIDI controller as input
+    - MIDIMonster v0.5 on Debian 10.4
+    - Dolphin 5.0 from the Debian repositories
+    - A Launch Control MIDI controller as input
 
 Setting up the emulator
 -----------------------
@@ -21,7 +26,7 @@ via an emulator, but suffice to say that you should always make sure that you ac
 
 Dolphin allows you to use any gamepad, joystick, mouse or connected Wii Controller to play your favourite games.
 
-We're hooking into that using the MIDIMonster `evdev backend <https://github.com/cbdevnet/midimonster/blob/master/backends/evdev.md>`_,
+We're hooking into that using the MIDIMonster `evdev backend`_,
 which can not only use mouse, keyboard and gamepad input to control any other protocol, but can also act as a
 *virtual input device*, making it possible to use it to create a virtual gamepad (or mouse, keyboard, etc. for that
 matter), controlled by any other protocol and scripting language supported by the MIDIMonster.
@@ -41,7 +46,7 @@ Writing the configuration
 
 Let's start with an fresh, empty configuration file. First, we're going to configure the control input into
 the MIDIMonster. In this case, I want to use my Launch Control MIDI controller. On Linux, I can use the `midi
-backend <https://github.com/cbdevnet/midimonster/blob/master/backends/midi.md>`_ to get input from and send output
+backend`_ to get input from and send output
 to MIDI devices.
 
 Now, because I use this controller a lot, I have customized its internal configuration so that the 16 rotaries
@@ -50,7 +55,7 @@ If you're using another backend for input, or want to use a different controller
 what MIDIMonster channels that input comes in on.
 
 Some backends, such as the `midi` backend, offer an option that lets you see any incoming data on the console,
-which helps greatly with finding that out. Have a look at the `documentation file <https://github.com/cbdevnet/midimonster#backend-documentation>`_
+which helps greatly with finding that out. Have a look at the `documentation`_
 of the backend you're intending to use to find out more.
 
 So, to get input from my Launch Control into the MIDIMonster, I'm creating an instance that will read from the
@@ -64,7 +69,7 @@ Note that I omitted the backend configuration section for the `midi` backend, be
 default values for that so far.
 
 The next step is to create another instance for the controller output, this time using the `evdev` backend.
-Again the `backend documentation file <https://github.com/cbdevnet/midimonster/blob/master/backends/evdev.md>`_
+Again the `evdev backend documentation file`_
 gives a lot of useful hints for configuring this.
 
 We'll start with ::
