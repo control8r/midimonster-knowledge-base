@@ -2,9 +2,9 @@ Welcome to the ``MIDIMonster`` Knowledge Base!
 ==============================================
 
 
-First of all: What is **MIDIMonster**?
+First of all: What is the **MIDIMonster**?
 --------------------------------------
-   **MIDIMonster** is a universal control and translation tool for multi-channel absolute-value-based control and/or bus protocols.
+   The **MIDIMonster** is a universal control and translation tool for multi-channel absolute-value-based control and/or bus protocols.
 
    Especially the stage & show control world uses a lot of different protocols of this type, for example to control stage lighting,
    musical instruments and all kinds of effects.
@@ -29,10 +29,10 @@ What can **MIDIMonster** do?
    use your gamepad to control the pitch of your synthesizer - these are all things made possible with the **MIDIMonster** and some
    clever configuration and programming, :)
 
-   **MIDIMonster** can do much more!
-   Come find some examples and real usecases under ``Usecases``!
+   **MIDIMonster** can do that, and much more!
+   Browse some examples and real usecases in the `Usecases` section and maybe even add your own!
 
-Do you need ``HELP``? or found a ``BUG``?
+Need help? Encountered a strange problem?
 -----------------------------------------
 
    If you encounter a bug or suspect a problem with a a protocol implementation, please
@@ -44,7 +44,7 @@ Do you need ``HELP``? or found a ``BUG``?
 Contributing
 ------------
 
-   If you like **MIDIMonster** and have found a usecase for it, we would be happy if you could share your experience and knowledge here!
+   If you like the **MIDIMonster** and have found a usecase for it, we would be happy if you could share your experience and knowledge here!
    Just create an article in our `Github repository <https://github.com/control8r/midimonster-knowledge-base>`_ and tell us all about your
    adventures and ideas!
 
