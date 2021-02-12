@@ -116,4 +116,4 @@ Contributing
 
    Knowledge Base Repository <https://github.com/control8r/midimonster-knowledge-base>
    MIDIMonster Repository <https://github.com/cbdevnet/midimonster>
-   Legal Notice <https://midimonster.net/impressum.html>
+   Legal Notice <https://midimonster.net/legal.html>
