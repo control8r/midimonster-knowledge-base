@@ -23,11 +23,9 @@ Before tagging a release
 
 * Documentation
    * |check| Make sure the README is up to date and reflects the current state of the software
-
       * |check| Make sure all backends are linked from the main README
    * |check| Check that all backend documentation properly reflects the current state of the backends
    * |check| If something in the backend documentation changes, update the midimonster submodule in the knowledge-base repository.
-
       * |check| This includes known bugs & problems
    * |check| Check that the manpage contains up to date and correct information
    * |check| Check that the knowledge base does not make statements that directly contradict the current mainline documentation
@@ -38,4 +36,11 @@ After tagging a release
 * Artifacts
    * |check| Update the debianization on the `debian/master` branch
       * |check| Build a new Debian package using `gbp buildpackage`
+   * |check| Build binary packages for the target distributions
 
+* Distribution
+   * |check| Upload artifacts to the homepage and update the downloads section
+   * |check| Create a new release section on GitHub
+
+* Publicity
+   * |check| Announce the new release on the Homepage and appropriate social media channels
