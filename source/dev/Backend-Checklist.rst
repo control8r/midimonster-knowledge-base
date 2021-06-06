@@ -41,9 +41,12 @@ Testing
 Publish
 -------
 
-* |check|  Add the backend to the default target list in the backends makefile
+* |check| Add the backend to the default target list in the backends makefile
 * |check| Add the new backend to the main README
    * |check| Add to the initial backend overview, including the new backends target operating systems
    * |check| Add to the `backend documentation` section
+* |check| Add the new backend to auxiliary documentation
+   * |check| Sort into the packaging unit grouping
+   * |check| Add to the knowledge base backend overview
 * |check| If introducing new prerequisites
    * |check| Add the new preprequisites to the main README
