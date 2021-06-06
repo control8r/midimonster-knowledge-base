@@ -37,6 +37,7 @@ After tagging a release
    * |check| Update the debianization on the `debian/master` branch
       * |check| Build a new Debian package using `gbp buildpackage`
    * |check| Build binary packages for the target distributions
+      * |check| Build the manual backends where necessary
 
 * Distribution
    * |check| Upload artifacts to the homepage and update the downloads section
