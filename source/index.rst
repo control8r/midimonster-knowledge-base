@@ -3,7 +3,7 @@ Welcome to the ``MIDIMonster`` Knowledge Base!
 
 
 First of all: What is the **MIDIMonster**?
---------------------------------------
+------------------------------------------
    The **MIDIMonster** is a universal control and translation tool for multi-channel absolute-value-based control and/or bus protocols.
 
    Especially the stage & show control world uses a lot of different protocols of this type, for example to control stage lighting,
